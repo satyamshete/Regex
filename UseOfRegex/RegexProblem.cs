@@ -9,10 +9,11 @@ namespace UseOfRegex
 {
     internal class RegexProblem
     {
-        public Regex FirstName = new Regex(@"[A-Z]{1}[A-z a-z]{2,}");   ///UC1
+        public Regex FirstName = new Regex(@"[A-Z]{1}[A-z a-z]{2,}");
+        public Regex LastName = new Regex(@"[A-Z]{1}[A-z a-z]{2,}");   
 
 
-        public void CheckFirstName(string fName)   ///UC1
+        public void CheckFirstName(string fName)   
         {
             Console.WriteLine("first name is : " + fName);
             if (FirstName.IsMatch(fName))
@@ -22,6 +23,19 @@ namespace UseOfRegex
             else
             {
                 Console.WriteLine("Invalid first name");
+            }
+            Console.WriteLine();
+        }
+        public void CheckLastName(string lName)    ///UC2
+        {
+            Console.WriteLine("last name is : " + lName);
+            if (LastName.IsMatch(lName))
+            {
+                Console.WriteLine("Valid Last name");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Last name");
             }
             Console.WriteLine();
         }

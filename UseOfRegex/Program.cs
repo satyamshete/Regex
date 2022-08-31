@@ -9,6 +9,10 @@
 
             ////UC1 
             regexProblem.CheckFirstName("Viraj");
+
+            ////UC2
+            regexProblem.CheckLastName("Shinde");
+
         }
     }
 }
