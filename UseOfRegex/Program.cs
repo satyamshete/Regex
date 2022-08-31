@@ -13,6 +13,9 @@
             ////UC2
             regexProblem.CheckLastName("Shinde");
 
+            ///UC3
+            regexProblem.CheckEmail("abc.xyz@bl.co.in");
+
         }
     }
 }
