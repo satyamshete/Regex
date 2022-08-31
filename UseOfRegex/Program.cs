@@ -22,6 +22,9 @@
             ///UC5
             regexProblem.CheckPassmin8Char("Abc01234abre");
 
+            ///UC6
+            regexProblem.CheckPass8CharWithUpperCase("54bAvads");
+
         }
     }
 }
