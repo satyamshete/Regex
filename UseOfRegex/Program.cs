@@ -25,6 +25,9 @@
             ///UC6
             regexProblem.CheckPass8CharWithUpperCase("54bAvads");
 
+            ///UC7
+            regexProblem.CheckPass8CharWithNumber("abqmbAAAAA1");
+
         }
     }
 }

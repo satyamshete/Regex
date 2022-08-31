@@ -15,6 +15,7 @@ namespace UseOfRegex
         public Regex MobileNumber = new Regex(@"[0-9]{1,2}\s[0-9]{10}");
         public Regex PasswordMin8Char = new Regex(@"[A-Z a-z 0-9]{8,}");
         public Regex PasswordMin8Char2 = new Regex(@"(?=.*[A-Z])[A-Za-z0-9]{8,}");
+        public Regex PasswordMin8Char3 = new Regex(@"(?=.*[0-9])[A-Za-z0-9]{8,}");
 
 
         public void CheckFirstName(string fName)   
@@ -88,6 +89,19 @@ namespace UseOfRegex
         {
             Console.WriteLine("Password is : " + pass);
             if (PasswordMin8Char2.IsMatch(pass))
+            {
+                Console.WriteLine("Valid Password");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Password");
+
+            }
+        }
+        public void CheckPass8CharWithNumber(string pass)
+        {
+            Console.WriteLine("Password is : " + pass);
+            if (PasswordMin8Char3.IsMatch(pass))
             {
                 Console.WriteLine("Valid Password");
             }
