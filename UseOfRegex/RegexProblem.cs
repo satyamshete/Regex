@@ -13,6 +13,7 @@ namespace UseOfRegex
         public Regex LastName = new Regex(@"[A-Z]{1}[A-z a-z]{2,}");
         public Regex Email = new Regex(@"^[a-z A-Z 0-9 .+_-]+@[a-z A-Z 0-9 -.]+[.][a-z A-Z 0-9 -]{2,}$");
         public Regex MobileNumber = new Regex(@"[0-9]{1,2}\s[0-9]{10}");
+        public Regex PasswordMin8Char = new Regex(@"[A-Z a-z 0-9]{8,}");
 
 
         public void CheckFirstName(string fName)   
@@ -66,6 +67,21 @@ namespace UseOfRegex
             {
                 Console.WriteLine("Invalid number");
             }
+            Console.WriteLine();
+        }
+        public void CheckPassmin8Char(string pass)
+        {
+            Console.WriteLine("Password  is : " + pass);
+            if (PasswordMin8Char.IsMatch(pass))
+            {
+                Console.WriteLine("Valid Password");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Password");
+
+            }
+            Console.WriteLine();
         }
     }
 }

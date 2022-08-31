@@ -19,6 +19,9 @@
             ///UC4
             regexProblem.CheckMobilNumber("91 9145896327");
 
+            ///UC5
+            regexProblem.CheckPassmin8Char("Abc01234abre");
+
         }
     }
 }
