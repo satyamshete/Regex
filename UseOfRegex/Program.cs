@@ -28,6 +28,9 @@
             ///UC7
             regexProblem.CheckPass8CharWithNumber("abqmbAAAAA1");
 
+            ///UC8
+            regexProblem.CheckPass8CharWithSpecialChar("adf@asfwefwedw");
+
         }
     }
 }
