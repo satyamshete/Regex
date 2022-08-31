@@ -12,6 +12,7 @@ namespace UseOfRegex
         public Regex FirstName = new Regex(@"[A-Z]{1}[A-z a-z]{2,}");
         public Regex LastName = new Regex(@"[A-Z]{1}[A-z a-z]{2,}");
         public Regex Email = new Regex(@"^[a-z A-Z 0-9 .+_-]+@[a-z A-Z 0-9 -.]+[.][a-z A-Z 0-9 -]{2,}$");
+        public Regex MobileNumber = new Regex(@"[0-9]{1,2}\s[0-9]{10}");
 
 
         public void CheckFirstName(string fName)   
@@ -53,6 +54,18 @@ namespace UseOfRegex
                 Console.WriteLine("Invalid Email Id");
             }
             Console.WriteLine();
+        }
+        public void CheckMobilNumber(string mobileNumber)
+        {
+            Console.WriteLine("Mobile number is : " + mobileNumber);
+            if (MobileNumber.IsMatch(mobileNumber))
+            {
+                Console.WriteLine("Valid Number");
+            }
+            else
+            {
+                Console.WriteLine("Invalid number");
+            }
         }
     }
 }
